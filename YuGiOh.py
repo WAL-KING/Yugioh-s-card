@@ -4,7 +4,7 @@ import requests
 from googletrans import Translator
 from thefuzz import process
 
-TOKEN = "7776617699:AAG4SeLGLiU-8yk2kcg_NPdNJG8SFfKcU7Q"
+TOKEN = "7286284254:AAEQBmQPxEgTcOKXrNzet2FWwAfmjIKnHvQ"
 bot = telebot.TeleBot(TOKEN, parse_mode="HTML")
 translator = Translator()
 user_languages = {}
