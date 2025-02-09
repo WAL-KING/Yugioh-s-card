@@ -1,17 +1,14 @@
-# 🐍 Utiliser une image Python légère
-FROM python:3.8-slim
+# Utilisation d'une image Python légère
+FROM python:3.10
 
-# 📂 Définir le répertoire de travail
+# Définition du répertoire de travail
 WORKDIR /app
 
-# 🏗️ Installer les dépendances système nécessaires
-RUN apt-get update && apt-get install -y ffmpeg
+# Copier tous les fichiers dans le conteneur
+COPY . .
 
-# 📜 Copier les fichiers du bot dans le conteneur
-COPY . /app
-
-# 🔧 Installer les dépendances Python
+# Installer les dépendances
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 🚀 Lancer le bot Telegram
-CMD ["python", "réseau social.py"]
+# Lancer le bot
+CMD ["python", "monbot.py"]
