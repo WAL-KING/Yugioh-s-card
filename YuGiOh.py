@@ -1,10 +1,12 @@
+import os
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import requests
 from googletrans import Translator
 from thefuzz import process
 
-TOKEN = "7286284254:AAEQBmQPxEgTcOKXrNzet2FWwAfmjIKnHvQ"
+# Récupération du token Telegram depuis Fly.io (ou remets ton token en dur ici si besoin)
+TOKEN = "7286284254:AAEQBmQPxEgTcOKXrNzet2FWwAfmjIKnHvQ"  # Remets ton token ici
 bot = telebot.TeleBot(TOKEN, parse_mode="HTML")
 translator = Translator()
 user_languages = {}
