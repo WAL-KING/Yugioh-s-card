@@ -1,17 +1,17 @@
-# fly.toml app configuration file generated for yugioh-s-card-imzc6g on 2025-02-09T09:06:51Z
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'yugioh-s-card-imzc6g'
-primary_region = 'mad'
+# Configuration de l'application Fly.io
+app = "yugioh-s-card-imzc6g"  # Remplace par ton nom d'app Fly.io
+primary_region = "mad"
 
 [build]
 
+[deploy]
+  strategy = "rolling"
+
 [processes]
   app = "python monbot.py"
+
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
+  memory = "1gb"
+  cpu_kind = "shared"
   cpus = 1
   memory_mb = 1024
